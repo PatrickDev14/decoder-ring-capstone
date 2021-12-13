@@ -21,7 +21,6 @@ to use decode operation, the encode parameter === false
 
 */
 
-
 const caesarModule = (function () {
   // you can add any code you want within this function scope
 
