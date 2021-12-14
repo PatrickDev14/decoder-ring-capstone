@@ -4,20 +4,19 @@
 // of the anonymous function on line 6
 
 /* shift one input string into another string for encode, shift the opposite way for decode
+to use decode operation, the encode parameter === false
 function returns false if shift isn't present, or === 0, less than -25, or > 25
-turn strings into arrays, to use methods?
 split method for input string => array
-use .map(the bulk- check if character is alphanumeric, then it will be shifted, do something with ascii) then .join at the end
+use .map(the bulk- check if character is within ascii lower case alpha characters, then it will be shifted; 
+  check if shift moves outside ascii range 97-122)
 
-use to.lowercase to avoid bigger ascii numbers of capitalized characters?
+use to.lowercase to avoid wider range of ascii numbers of capitalized characters
 decipher case for space === 32, use no shift
 decipher case for small letters, >= 97 && <= 122, use shift
 decipher case for other symbols, >= 33 && <= 96, use no shift
 
 shift from end of alphabet should wrap to front of alphabet
-join method for array => string output
-to use decode operation, the encode parameter === false
-
+join method at the end for array => string output
 */
 
 const caesarModule = (function () {
