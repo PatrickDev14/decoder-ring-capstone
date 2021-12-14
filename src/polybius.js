@@ -35,11 +35,11 @@ function polybius(input, encode = true) {
           if (char.charCodeAt() < 97 || char.charCodeAt() > 122) {
             return char;
             }
-          return encodeSquare.char;        
+          return encodeSquare[char];        
       
         }).join("");
     }
-
+  }
   return {
     polybius,
   };
