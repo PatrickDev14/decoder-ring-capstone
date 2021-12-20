@@ -11,7 +11,8 @@ when ascii between 97 and 122, convert with encodingObj key-- the join() at the 
 
 
 decoding when encoding=false -- the number of characters in the string -exlcuding spaces- should be even
-how to split() after every 2 numbers?
+add in extra space to single spaces, so a for loop can loop with i+=2;
+build number codes adding index i, and then index [i+1]
 */
 
 const polybiusModule = (function () {
