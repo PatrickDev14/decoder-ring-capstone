@@ -2,7 +2,7 @@
 const expect = require("chai").expect;
 const substitution = require("../src/substitution");
 
-describe("substitution() submission tests written by PatrickDev14", () => {
+describe("substitution() tests written by PatrickDev14", () => {
     it("should ignore capital letters", () => {
         const expected = "ixpar yd"
         const actual = substitution.substitution("Grays Mt", "plmoknijbuhvygctfxrdzeswaq", encode = true);
