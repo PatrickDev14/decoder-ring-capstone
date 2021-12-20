@@ -9,7 +9,6 @@ use input.toLowercase(), then split() and map() the inputLower string
 check if charCodeAt is outside of lower alpha characters, ascii 97 and 122, return the character
 when ascii between 97 and 122, convert with encodingObj key-- the join() at the end returns an array as a string
 
-
 decoding when encoding=false -- the number of characters in the string -exlcuding spaces- should be even
 add in extra space to single spaces, so a for loop can loop with i+=2;
 build number codes adding index i, and then index [i+1]
@@ -70,8 +69,8 @@ function polybius(input, encode = true) {
       }
       return decodedMsg;
     }
-    
   }
+
   return {
     polybius,
   };
