@@ -5,7 +5,7 @@
 /* input can contain letters, spaces, special char; alphabet paramater can contain letters, spaces, special char; 
 alphabet.length must === 26 or return false; all of alphabet char must be unique; spaces should be maintained;
 
-map(char) from the input.split() array; realAlphabet.find(letter where char === letter ) = matchedLetter;
+map(for each char) from the input.split() array; realAlphabet.find(letter where char === letter ) = matchedLetter;
 matchedIndex = get indexOf matchedLetter; return alphabet[matchedIndex];
 
 */
@@ -20,20 +20,26 @@ const substitutionModule = (function () {
     // alphabet tests for presence, length
     if (!alphabet || alphabet.length !== 26) return false;
     //alphabet test for containing unique characters
-    for (let char in alphabet) {
-      const character = alphabet[char];
-      if (alphabet.slice(char + 1).includes(character)) return false;
+    for (let isUnique in alphabet) {
+      const checker = alphabet[isUnique];
+      if (alphabet.slice(isUnique + 1).includes(checker)) return false;
     }
     return input.toLowerCase()
       .split("")
-      .map((char) => {   //add criterion for space here
+      .map((char) => {
+        if (char == " ") return char;
+        else {
         if (encode) {
           matchedLetter = realAlphabet.find((letter) => letter === char);
           matchedIndex = realAlphabet.indexOf(matchedLetter);
           return alphabet[matchedIndex];
-
+          }
+        if (!encode) {
+          matchedIndex = alphabet.indexOf(char);
+          return realAlphabet[matchedIndex];
+          }
         }
-      })
+      }).join("");
   }
 
   return {
